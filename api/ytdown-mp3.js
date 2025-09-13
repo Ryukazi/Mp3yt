@@ -6,26 +6,21 @@ export default async function handler(req, res) {
   }
 
   const { url } = req.query;
-
-  if (!url) {
-    return res.status(400).json({ error: "❌ Missing YouTube URL" });
-  }
+  if (!url) return res.status(400).json({ error: "❌ Missing YouTube URL" });
 
   try {
-    // Call the original Kaizenji API
     const response = await axios.get(
       `https://kaiz-apis.gleeze.com/api/ytdown-mp3?url=${encodeURIComponent(
         url
       )}&apikey=ed9ad8f5-3f66-4178-aec2-d3ab4f43ad0d`
     );
 
-    // Customize response
     const data = response.data;
-    data.author = "Denish Tharu"; // ✅ your custom author
+    data.author = "Denish Tharu";
 
-    res.status(200).json(data);
+    return res.status(200).json(data);
   } catch (err) {
-    res.status(500).json({
+    return res.status(500).json({
       error: "⚠️ Failed to fetch YouTube MP3",
       details: err.message,
     });
