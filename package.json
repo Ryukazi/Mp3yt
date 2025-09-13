@@ -1,5 +1,5 @@
 {
-  "name": "mp3yt-api",
+  "name": "mp3yt-vercel",
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
