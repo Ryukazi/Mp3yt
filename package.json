@@ -1,0 +1,12 @@
+{
+  "name": "pinterest-api",
+  "version": "1.0.0",
+  "description": "Pinterest Downloader API by Denish",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api/pin.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+}
