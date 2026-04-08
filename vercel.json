@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/pin",
+      "dest": "/api/pin.js"
+    }
+  ]
+}
